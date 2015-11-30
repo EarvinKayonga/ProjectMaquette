@@ -11,6 +11,10 @@ var paths = {
   bower: 'bower_components'
 }
 
+var app = {
+   env: process.env.PRODUCTION != "PRODUCTION"
+}
+
 gulp.task('default', ['scripts', 'serve', 'watch']);
 
 gulp.task('scripts', function() {
@@ -31,7 +35,8 @@ gulp.task('scripts', function() {
 gulp.task('serve', function() {
   gulp.src(paths.temp)
     .pipe(webserver({
-      livereload: true
+	livereload: app.env, // Check the ENV settings
+	port: process.env.PORT || 8000
     }));
 });
 

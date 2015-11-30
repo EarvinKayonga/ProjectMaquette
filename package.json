@@ -1,12 +1,12 @@
 {
-  "name": "FrontProject",
+  "name": "ProjectMaquette",
   "version": "0.0.1",
   "description": "frontEnd",
-  "main": "server.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Papi",
   "license": "ISC",
   "dependencies": {
     "bower": "^1.4.2",
