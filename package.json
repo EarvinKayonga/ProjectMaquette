@@ -5,7 +5,7 @@
     "main": "gulpfile.js",
     "scripts": {
 	"start": "node node_modules/gulp/bin/gulp",
-	"preinstall" : "bower install";
+	"preinstall" : "bower install",
 	"postinstall": "bower install;  node node_modules/gulp/bin/gulp",
 	"test": "echo \"Error: no test specified\" && exit 1"
     },
