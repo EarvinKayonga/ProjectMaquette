@@ -12,7 +12,7 @@ var paths = {
 }
 
 var app = {
-   env: process.env.PRODUCTION != "PRODUCTION"
+   env: process.env.ENV != "production"
 }
 
 gulp.task('default', ['scripts', 'serve', 'watch']);
