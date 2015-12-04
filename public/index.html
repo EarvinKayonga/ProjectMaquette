@@ -1,16 +1,75 @@
 <!DOCTYPE html>
-<html ng-app='BnpApp'>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/main.css" media="screen" title="maincss" charset="utf-8">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="maincss" charset="utf-8">
-    <title>CE de la banque BNP Paribas</title>
-  </head>
-  <body ng-controller='mainController'>
-    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js" ></script>
-    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js" ></script>
-    <script type="text/javascript" src="bower_components/angular/angular.min.js" ></script>
-    <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="js/controllers.js"></script>
-  </body>
+<html ng-app='BnpApp' lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/main.css" title="maincss" charset="utf-8">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="maincss" charset="utf-8">
+  <title>CE de la banque BNP Paribas</title>
+</head>
+
+<body ng-controller='mainController' class="container">
+  <header ng-controller='headController'>
+    <nav>
+      <img src="favicon.png" alt="logo" />
+      <ul class="opts">
+        <li ng-if='!user.login' class='btn glyphicon glyphicon-home' data-toggle="modal" data-target="#signin">Connexion</li>
+        <li ng-if='user.login' class='btn glyphicon glyphicon-user'>{{user.login}}</li>
+        <li ng-if='user.login' class='btn glyphicon glyphicon-log-out' ng-click='signOut()'>Déconnexion</li>
+      </ul>
+    </nav>
+    <!-- Modal -->
+    <div id="signin" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Connexion</h4>
+          </div>
+          <div class="modal-body">
+            <form class="connectForm" ng-submit='auth(User)'>
+              <div class="form-group">
+                <label for="login">Login :</label>
+                <input type="text" class="form-control" name="login" ng-model="User.login" required>
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password :</label>
+                <input type="password" class="form-control" name="password" ng-model='User.password' required>
+              </div>
+              <div class="form-group">
+                <input type="submit"  class="form-control btn btn-success" data-dismiss="modal" ng-click='auth(User)' value="Connexion">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <footer>
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+
+    </div>
+  </footer>
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/controllers.js"></script>
+</body>
+
 </html>

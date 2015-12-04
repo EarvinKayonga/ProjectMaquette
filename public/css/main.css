@@ -1,0 +1,59 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+
+clear{
+  clear: both;
+}
+
+@font-face {
+    font-family: BnpFont;
+    src: url(../bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff);
+}
+
+.container{
+  background: #00965e;
+}
+
+nav{
+  height: 160px;
+}
+
+nav img{
+  margin-left: 20px;
+}
+
+nav .opts{
+  float: right;
+}
+
+.opts li {
+  font-family: Bnpfont;
+  padding: 4px;
+  margin: 20px 10px 3px 0px;
+  text-align: right;
+  font-size: 15px;
+  cursor: pointer;
+}
+.modal-header{
+    background: #FF2D00;
+}
+.modal-title{
+  text-align: center;
+  height: 20px;
+}
+
+.modal-content{
+  border-radius: 0px !important;
+}
+
+.modal-body{
+  height: 60%;
+}
+
+.modal-footer{
+  height: 20px;
+  background: #FF2D00;
+  text-align: center;
+}
