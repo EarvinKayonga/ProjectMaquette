@@ -1,33 +1,33 @@
-body{
+body {
   padding: 0;
   margin: 0;
 }
-
-clear{
+.nopadding {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+clear {
   clear: both;
 }
-
 @font-face {
-    font-family: BnpFont;
-    src: url(../bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff);
+  font-family: BnpFont;
+  src: url(../bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff);
 }
-
-.container{
+.main {
   background: #00965e;
 }
-
-nav{
+.container {
+  background: #00965e;
+}
+nav {
   height: 160px;
 }
-
-nav img{
+nav img {
   margin-left: 20px;
 }
-
-nav .opts{
+nav .opts {
   float: right;
 }
-
 .opts li {
   font-family: Bnpfont;
   padding: 4px;
@@ -36,24 +36,45 @@ nav .opts{
   font-size: 15px;
   cursor: pointer;
 }
-.modal-header{
-    background: #FF2D00;
+.modal-header {
+  background: #FF2D00;
 }
-.modal-title{
+.modal-title {
   text-align: center;
   height: 20px;
 }
-
-.modal-content{
+.modal-content {
   border-radius: 0px !important;
 }
-
-.modal-body{
+.modal-body {
   height: 60%;
 }
-
-.modal-footer{
+.modal-footer {
   height: 20px;
   background: #FF2D00;
   text-align: center;
+}
+footer {
+  height: 240px;
+  background: white !important;
+}
+.left {
+  border-right: 3px solid black;
+  height: 220px;
+}
+.right {
+  border-left: 3px solid black;
+  height: 220px;
+}
+.pfooter {
+  text-align: center;
+  margin-top: 50px;
+  padding: 10px;
+  font-size: 33%;
+}
+
+.contactList{
+  margin-top: 50px;
+  list-style: none;
+  font-size: 130%;
 }

@@ -10,59 +10,85 @@
   <title>CE de la banque BNP Paribas</title>
 </head>
 
-<body ng-controller='mainController' class="container">
-  <header ng-controller='headController'>
-    <nav>
-      <img src="favicon.png" alt="logo" />
-      <ul class="opts">
-        <li ng-if='!user.login' class='btn glyphicon glyphicon-home' data-toggle="modal" data-target="#signin">Connexion</li>
-        <li ng-if='user.login' class='btn glyphicon glyphicon-user'>{{user.login}}</li>
-        <li ng-if='user.login' class='btn glyphicon glyphicon-log-out' ng-click='signOut()'>Déconnexion</li>
-      </ul>
-    </nav>
-    <!-- Modal -->
-    <div id="signin" class="modal fade" role="dialog">
-      <div class="modal-dialog">
+<body>
+  <div ng-controller='mainController' class="main">
+    <header ng-controller='headController' class="container">
+      <nav>
+        <img src="favicon.png" alt="logo" />
+        <ul class="opts">
+          <li ng-if='!user.login' class='btn glyphicon glyphicon-home' data-toggle="modal" data-target="#signin">Connexion</li>
+          <li ng-if='user.login' class='btn glyphicon glyphicon-user'>{{user.login}}</li>
+          <li ng-if='user.login' class='btn glyphicon glyphicon-log-out' ng-click='signOut()'>Déconnexion</li>
+        </ul>
+      </nav>
+      <!-- Modal -->
+      <div id="signin" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Connexion</h4>
-          </div>
-          <div class="modal-body">
-            <form class="connectForm" ng-submit='auth(User)'>
-              <div class="form-group">
-                <label for="login">Login :</label>
-                <input type="text" class="form-control" name="login" ng-model="User.login" required>
-              </div>
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Connexion</h4>
+            </div>
+            <div class="modal-body">
+              <form class="connectForm" ng-submit='auth(User)'>
+                <div class="form-group">
+                  <label for="login">Login :</label>
+                  <input type="text" class="form-control" name="login" ng-model="User.login" required>
+                </div>
 
-              <div class="form-group">
-                <label for="password">Password :</label>
-                <input type="password" class="form-control" name="password" ng-model='User.password' required>
-              </div>
-              <div class="form-group">
-                <input type="submit"  class="form-control btn btn-success" data-dismiss="modal" ng-click='auth(User)' value="Connexion">
-              </div>
-            </form>
+                <div class="form-group">
+                  <label for="password">Password :</label>
+                  <input type="password" class="form-control" name="password" ng-model='User.password' required>
+                </div>
+                <div class="form-group">
+                  <input type="submit" class="form-control btn btn-success" data-dismiss="modal" ng-click='auth(User)' value="Connexion">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+            </div>
           </div>
-          <div class="modal-footer">
-          </div>
+
         </div>
-
+      </div>
+    </header>
+  </div>
+  <footer class="nopadding">
+    <div class="left col-xs-6 col-md-4">
+    <h3>Contact</h3>
+    <div class="contact">
+      <ul class="contactList">
+        <li>Tel: 02 02 XX XX XX</li>
+        <li>Web: contact@txxx.fr</li>
+      </ul>
+    </div>
+    </div>
+    <div class="mid col-xs-6 col-md-4">
+      <h3> Suivez notre actualité: </h3>
+      <div class="social">
+        <p class="pfooter">
+          <!--Facebook icon-->
+          <a href="http://facebook.com/flashissue" target="_blank">
+            <img alt="" src="https://s3.amazonaws.com/flashissue/ueBIjxRoTBuYR6XWW1iO_v3qVW5nRUq5VZF9RQXi2_twitter.png" /> </a>&nbsp; &nbsp; &nbsp;
+          <!--Google+ icon-->
+          <a href="http://plus.google.com" target="_blank">
+            <img alt="" src="https://s3.amazonaws.com/flashissue/gHd2XoyiQbKBqljm7bzg_63j3xtd7SX28TTMeOSfZ_google.png" /> </a>&nbsp; &nbsp;&nbsp;
+          <!--Twitter icon-->
+          <a href="http://twitter.com/flashissue" target="_blank">
+            <img alt="" src="https://s3.amazonaws.com/flashissue/MsIJsIsDT9WLAxxH4aIK_OgdHV3vxSR2737LGd8cq_facebook.png" /> </a>&nbsp; &nbsp;&nbsp;
+          <!--Linkedin icon-->
+          <a href="http://pinterest.com" target="_blank">
+            <img alt="" src="https://s3.amazonaws.com/flashissue/b8Xt2lN8TCKhilmoHXGW_TCjqF6FgS86WoWzUOQCh_pinterest.png" /> </a>
+        </p>
       </div>
     </div>
-  </header>
-
-  <footer>
-    <div class="col-md-4">
-
-    </div>
-    <div class="col-md-4">
-
-    </div>
-    <div class="col-md-4">
-
+    <div class="right col-xs-6 col-md-4">
+      <h3>à propos du CE</h3>
+      <p >
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      </p>
     </div>
   </footer>
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
