@@ -9,5 +9,4 @@ angular.module('BnpApp', [])
       arg["lastname"] = 'Gillard';
       $rootScope.user = arg;
     };
-
   });
